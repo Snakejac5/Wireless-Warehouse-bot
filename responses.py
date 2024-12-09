@@ -1,4 +1,5 @@
 import os
+import shutil
 from typing import Callable
 
 import discord
@@ -117,7 +118,12 @@ async def getfiles_(client, message: Message, data: dict, user_data_call: Callab
 async def pull_(client, message: Message, data: dict, user_data_call: Callable[[str or User or Member], dict], is_op: bool = False, *args):
     if not is_op:
         return False
-    os.system("git clone https://github.com/Snakejac5/Wireless-Warehouse-bot.git './'")
+    if os.path.exists("./update"):
+        shutil.rmtree("./update")
+    # os.rmdir("./update")
+    os.system("git clone https://github.com/Snakejac5/Wireless-Warehouse-bot.git ./update")
+    for file in os.listdir("./update"):
+        shutil.move(f"./update/{file}", file)
 
 
 
