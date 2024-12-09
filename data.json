@@ -1,0 +1,58 @@
+{
+	"masterstaff23": {
+		"minecraft username": "CStafford14",
+		"storage space": "1 vault",
+		"quantum bridge": true,
+		"magnet card": false,
+		"terminal": "Physical\u00a0Terminal",
+		"steak": true,
+		"iron": true,
+		"cobblestone": false,
+		"create bits": true,
+		"ae2 bits": true,
+		"liquids": true,
+		"status": "Invalid"
+	},
+	"lizzystorm12": {
+		"minecraft username": "Lizzystorm",
+		"storage space": "1\u00a0Stack",
+		"quantum bridge": false,
+		"magnet card": true,
+		"terminal": "Wireless\u00a0Terminal",
+		"steak": false,
+		"iron": false,
+		"cobblestone": false,
+		"create bits": true,
+		"ae2 bits": false,
+		"liquids": false,
+		"status": "Ordered"
+	},
+	"_.anyone._": {
+		"minecraft username": "Mechanair",
+		"storage space": "20\u00a0Stacks",
+		"quantum bridge": false,
+		"magnet card": false,
+		"terminal": "Physical\u00a0Terminal",
+		"steak": true,
+		"iron": false,
+		"cobblestone": true,
+		"create bits": false,
+		"ae2 bits": false,
+		"liquids": true,
+		"status": "Ordered"
+	},
+	"snakejac": {
+		"minecraft username": "Snakejac",
+		"storage space": "20\u00a0Vaults",
+		"quantum bridge": true,
+		"magnet card": true,
+		"terminal": "Wireless\u00a0Crafting\u00a0Terminal",
+		"steak": true,
+		"iron": false,
+		"cobblestone": true,
+		"create bits": true,
+		"ae2 bits": false,
+		"liquids": true,
+		"status": "Ordered"
+	}
+}

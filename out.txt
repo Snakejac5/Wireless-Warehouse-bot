@@ -1,0 +1,11 @@
+
+minecraft username: Snakejac 
+     storage space: 10 vaults
+    quantum bridge: True     
+             steak: True     
+              iron: True     
+       cobblestone: True     
+       create bits: True     
+          ae2 bits: True     
+           liquids: True     
+            status: ordered
