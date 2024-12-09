@@ -363,7 +363,7 @@ class WirelessWarehouseBot(discord.ext.commands.Bot):
                     await message.author.send(" ", file=File("out.txt"))
                 
                 else:
-                    await message.author.send(str(s or "_"))
+                    await message.author.send(str(s or "||\u200b||"))
                 return
             # elif message.content.lower() == "-viewall":
             #     o = json.load(open("data.json"))
@@ -411,7 +411,7 @@ class WirelessWarehouseBot(discord.ext.commands.Bot):
         if message.author.id == self.user.id:
             if not message.content and message.poll is None and message.components is None:
                 await message.delete()
-            elif message.components and type(message.channel) is DMChannel and (message.content == "" or message.content.endswith("\0") or "\0" in message.content):
+            elif message.components and type(message.channel) is DMChannel and (message.content == "" or "\0" in message.content):
                 # message.channel: DMChannel
                 if self.views.get(message.channel.id):
                     self.views[message.channel.id].append(message)

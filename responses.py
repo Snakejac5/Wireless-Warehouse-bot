@@ -130,11 +130,20 @@ async def pull_(client, message: Message, data: dict, user_data_call: Callable[[
     if not is_op:
         return False
     if os.path.exists("./update"):
-        shutil.rmtree("./update")
-    # os.rmdir("./update")
+        shutil.rmtree("./update", ignore_errors=True)
+        # os.rmdir("./update")
     os.system("git clone https://github.com/Snakejac5/Wireless-Warehouse-bot.git ./update")
     for file in os.listdir("./update"):
-        shutil.move(f"./update/{file}", file)
+        if file == "startup.py":
+            continue
+        try:
+            if os.path.exists(file):
+                os.remove(file)
+            shutil.copy(f"./update/{file}", file)
+        except Exception as e:
+            print(e)
+            print(e.__class__)
+            pass
     await reload_(client, message, data, user_data_call, is_op, *args)
 
 

@@ -22,7 +22,7 @@ keys_to_beauty = {
     "storage space": "Storage",
     "quantum bridge": "Quantum bridge",
     "magnet card": "Magnet card",
-    "terminal": "Terminal\u00a0type",
+    "terminal": "Terminal type",
     "steak": "Access to infinite steak",
     "iron": "Access to infinite iron",
     "cobblestone": "Access to infinite cobblestone",
@@ -41,7 +41,7 @@ def beautify(user, data, one=False, *whitelist):
                          [f"\0{f"{get_color(t)}{keys_to_beauty[t[0]] + ":": <35}{RESET} {get_color(t)}{str(t[1]):<{max(lens)}} {RESET}"}"
                           for t in data[str(user)].items() if t[0] in whitelist] + ["\n```"])
     
-    return "\n".join([f"### `{str(user)}`'s order:\n```ansi" if not one else "Your order:\n```ansi"] +
+    return "\n".join([f"### `{str(user)}`'s order:\n```ansi" if not one else "**Your order:**\n```ansi"] +
                      [f"{f"{get_color(t)}{keys_to_beauty[t[0]] + ":": <31}\u00a0{RESET}{get_color(t)}{("Yes" if t[1] else "No") if type(t[1]) is bool else (str(t[1])):<{max(lens)}} {RESET}"}"
                       for t in data[str(user)].items()] + ["\n```"])
 
