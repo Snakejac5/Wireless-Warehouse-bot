@@ -115,6 +115,17 @@ async def getfiles_(client, message: Message, data: dict, user_data_call: Callab
     await message.author.send(files=(File("main.py"), File("views.py"), File("responses.py"), File("notification.json"), File("eggs.json"), File("data.json")))
 
 
+# async def push_(client, message: Message, data: dict, user_data_call: Callable[[str or User or Member], dict], is_op: bool = False, *args):
+#     if not is_op:
+#         return False
+#     if os.path.exists("./update"):
+#         shutil.rmtree("./update")
+#     for file in os.listdir("./"):
+#         os.system(f"git commit https://github.com/Snakejac5/Wireless-Warehouse-bot.git {file}")
+#         os.system(f"git push https://github.com/Snakejac5/Wireless-Warehouse-bot.git {file}")
+
+
+
 async def pull_(client, message: Message, data: dict, user_data_call: Callable[[str or User or Member], dict], is_op: bool = False, *args):
     if not is_op:
         return False
@@ -124,6 +135,7 @@ async def pull_(client, message: Message, data: dict, user_data_call: Callable[[
     os.system("git clone https://github.com/Snakejac5/Wireless-Warehouse-bot.git ./update")
     for file in os.listdir("./update"):
         shutil.move(f"./update/{file}", file)
+    await reload_(client, message, data, user_data_call, is_op, *args)
 
 
 
