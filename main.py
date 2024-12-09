@@ -18,7 +18,7 @@ import importlib
 import responses
 import views
 
-env__read = open(".env").read()
+env__read = open("../.private/.env").read()
 TOKEN: Final[str] = env__read[env__read.index("DISCORD_TOKEN=") + 14:env__read.index("DISCORD_TOKEN=") + 14 + env__read[env__read.index("DISCORD_TOKEN=") + 14:].index("\n")]
 
 op_list = [int(n) for n in open("op_list.txt").read().strip().split("\n")]
